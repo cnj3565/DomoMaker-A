@@ -5,7 +5,7 @@ const requiresLogin = (req, res, next) => {
     return next();
 }
 
-const requiresLogout = (req, res, nest) => {
+const requiresLogout = (req, res, next) => {
     if(req.session.account) {
         return res.redirect('/maker');
     }

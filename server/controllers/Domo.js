@@ -29,7 +29,7 @@ const makeDomo = async (req, res) => {
     return res.json({ redirect: '/maker' });
   } catch (err) {
     console.log(err);
-    if(err.code = 11000) {
+    if(err.code === 11000) {
       return res.status(400).json({ error: 'Domo already exists! '});
     }
     return res.status(400).json({ error: 'An error occured' });
